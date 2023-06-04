@@ -1,0 +1,292 @@
+body {
+  font-family: 'Assistant', sans-serif;
+  margin: 0px;
+  padding: 0px;
+  letter-spacing: 1px;
+}
+
+i {
+  color: black;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+li {
+  list-style-type: none;
+}
+
+/* =================Header==================== */
+
+.announcement-bar {
+  background-color: black;
+  text-align: center;
+  padding: 10.5px 0px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  gap: 10px;
+}
+
+.announcement-bar:hover {
+  opacity: 0.9;
+}
+
+.announcement-bar:hover i {
+  transform: scaleX(1.2) translateX(2px);
+  ;
+}
+
+
+.announcement-bar a {
+  text-decoration: none;
+  color: white;
+  font-size: 13.65px;
+  letter-spacing: 1px;
+
+}
+
+.announcement-bar i {
+  color: white;
+}
+
+.menu-nav {
+  padding: 20px 52.5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-logo {
+  max-width: 100px;
+  width: fit-content;
+}
+
+.main-menu {
+  display: flex;
+  gap: 30px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+
+.main-menu li a {
+  padding-bottom: 20px;
+  font-size: 14.7px;
+  letter-spacing: 1px;
+}
+
+.menu-icons {
+  display: flex;
+  gap: 15px;
+  width: fit-content;
+}
+
+.menu-nav>i {
+  display: none;
+}
+
+.main-menu>li>ul {
+  display: none;
+}
+
+.main-menu>li ul {
+  padding: 0;
+  margin: 0;
+}
+
+.main-menu>li:hover>a>i {
+  transform: rotateX(180deg);
+  transition: all .4s ease-in-out;
+
+}
+
+.main-menu>li:hover>ul {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 20px 0;
+}
+
+.main-menu>li:hover {
+  border-bottom: 1px solid gray;
+}
+
+.main-menu>li ul {
+  position: absolute;
+  background-color: white;
+}
+
+.menu-icons li a i:hover {
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .announcement-bar a {
+    font-size: 12.6px;
+  }
+
+  .menu-nav {
+    padding: 20px 15px 20px 10px;
+  }
+
+  .menu-nav>i {
+    display: block;
+  }
+
+  .main-menu {
+    display: none;
+  }
+}
+
+
+
+
+/* =============hero section================= */
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 73.5vh;
+}
+
+.hero-section img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 73.5vh;
+  object-position: center 59.5%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.hero-section > div {
+  transform: translate(50%, 30%);
+  max-width: 21rem;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.hero-section h1, .hero-section p {
+  color: white;
+  margin: 0;
+}
+
+.hero-section h1 {
+  font-size: 54.6px;
+  font-weight: normal;
+}
+
+.hero-section p {
+  font-size: 16.8px;
+  font-weight: normal;
+}
+
+.guide-btn {
+  max-width: 420px;
+  min-width: 260px;
+  background-color: #f7f7f7a0;
+  padding: 16px 38px;
+  cursor: pointer;
+  max-height: 172px;
+  border: none;
+  font-size: 13px;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.guide-btn > span {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.guide-btn > div {
+  display: none;
+  transition: all 2s ease-in;
+}
+
+.guide-btn > div > div  {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+  .guide-btn > div > div > a {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #f7f7f7a0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#guidance-checkbox {
+  display: none;
+}
+#guidance-checkbox:checked ~ div {
+  display: flex;
+  justify-content: space-between;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  background-color: #f3f3f3;
+}
+
+.social-icons {
+  display: flex;
+  gap: 20px;
+
+}
+
+.footer-links {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 50px;
+}
+
+.footer-links div img {
+  width: 100px;
+}
+
+.footer-links ul {
+  padding: 0;
+}
+
+.footer-links h3 {
+  margin: 0;
+  font-size: 18.9px;
+  font-weight: 600;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.links li {
+  font-size: 14.7px;
+}
+
+.links a:hover {
+  cursor: pointer;
+  border-bottom: 0.03rem solid black;
+}
+
+.payments-copyrights {
+  font-size: 10.5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
