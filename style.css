@@ -117,6 +117,7 @@ li {
 .main-menu>li ul {
   position: absolute;
   background-color: white;
+  z-index: 10;
 }
 
 .menu-icons li a i:hover {
@@ -337,6 +338,11 @@ footer a:hover {
   color: orange;
 }
 
+.gallery h3 {
+  font-weight: 400;
+  font-size: 15px;
+}
+
 .heart i {
   color: black;
   background-color: white;
@@ -359,4 +365,29 @@ footer a:hover {
   position: absolute;
   margin-top: -35px;
   margin-left: 5px;
+}
+
+del {
+  font-weight: 300;
+  font-size: 14px;
+}
+
+h2 {
+ font-weight: 400;
+ padding-left: 65px;
+ /* margin-bottom: -8px; */
+}
+
+.shop-by-room, 
+.shop-by-style {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.shop-by-room img, 
+.shop-by-style img {
+  width: 400px;
+
 }
