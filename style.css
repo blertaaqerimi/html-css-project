@@ -5,6 +5,10 @@ body {
   letter-spacing: 1px;
 }
 
+main {
+  width: 100%;
+}
+
 i {
   color: black;
 }
@@ -163,7 +167,7 @@ li {
   z-index: -1;
 }
 
-.hero-section > div {
+.hero-section>div {
   transform: translate(50%, 30%);
   max-width: 21rem;
   display: flex;
@@ -201,25 +205,25 @@ li {
   gap: 20px;
 }
 
-.guide-btn > span {
+.guide-btn>span {
   display: flex;
   gap: 8px;
   align-items: center;
 }
 
-.guide-btn > div {
+.guide-btn>div {
   display: none;
   transition: all 2s ease-in;
 }
 
-.guide-btn > div > div  {
+.guide-btn>div>div {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 5px;
 }
 
-.guide-btn > div > div > a {
+.guide-btn>div>div>a {
   width: 60px;
   height: 60px;
   border-radius: 50%;
@@ -233,7 +237,7 @@ li {
   display: none;
 }
 
-#guidance-checkbox:checked ~ div {
+#guidance-checkbox:checked~div {
   display: flex;
   justify-content: space-between;
 }
@@ -243,6 +247,7 @@ footer {
   flex-direction: column;
   background-color: #f3f3f3;
   padding-bottom: 26px;
+  width: 100%;
 }
 
 .social-icons {
@@ -321,32 +326,54 @@ footer a:hover {
   border: none;
 }
 
-.gallery {
-  /* width: 100%; */
-  display: flex;
-  /* justify-content: space-around; */
-  flex-wrap: wrap;
-  margin-left: 80px;
-  gap: 10px;
-}
-
 .hover-images-effect {
   position: relative;
-  width: 290px;
+  width: 310px;
 }
 
-.hover-images-effect > img:last-child {
+.hover-images-effect>img:last-child {
   display: none;
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 99;
+  z-index: 2;
   transition: .3s ease-in-out;
   box-sizing: border-box;
 }
 
-.hover-images-effect:hover > img:last-child {
+.hover-images-effect:hover>img:last-child {
   display: block;
+}
+
+.most-popular {
+  display: flex;
+  flex-direction: column;
+  background-color: #F3F3F3;
+  padding: 1.875rem 5rem;
+}
+
+@media screen and (max-width: 768px) {
+  .most-popular {
+    padding: 1.875rem 2rem;
+  }
+}
+
+.most-popular h2 {
+  margin: 0;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 100%;
+}
+
+@media screen and (max-width: 1024px) {
+  .gallery {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+  }
 }
 
 .gallery img {
@@ -363,29 +390,30 @@ footer a:hover {
   font-size: 15px;
 }
 
-.heart i {
-  color: black;
+.heart {
+  position: absolute;
   background-color: white;
   border-radius: 50%;
-  padding: 8px;
-  z-index: 100;
-  position: absolute;
-  margin-top: -350px;
-  margin-left: 250px;
+  top: 50px;
+  right: 8px;
+  padding: 6px 8px;
+  z-index: 4;
 }
 
-.sale {
-  background-color: rgb(230, 18, 18);
-  color: white;
-  padding: 1px 10px;
-  border-radius: 15px;
+.heart i {
+  color: black;
 }
 
 .sale-tag {
   position: absolute;
-  margin-top: -35px;
-  margin-left: 5px;
-  z-index: 100;
+  bottom: 15px;
+  left: 10px;
+  z-index: 10;
+  padding: 1px 10px;
+  background-color: rgb(230, 18, 18);
+  color: white;
+  padding: 1px 10px;
+  border-radius: 15px;
 }
 
 del {
@@ -394,12 +422,12 @@ del {
 }
 
 h2 {
- font-weight: 400;
- padding-left: 65px;
- /* margin-bottom: -8px; */
+  font-weight: 400;
+  padding-left: 65px;
+  /* margin-bottom: -8px; */
 }
 
-.shop-by-room, 
+.shop-by-room,
 .shop-by-style {
   display: flex;
   justify-content: space-around;
@@ -411,20 +439,18 @@ h2 {
   /* margin-top: 30px; */
 }
 
-.shop-by-room img, 
+.shop-by-room img,
 .shop-by-style img {
   width: 400px;
 }
 
-.shop-by-room i:hover, 
+.shop-by-room i:hover,
 .shop-by-style i:hover {
   transform: scaleX(1.2) translateX(2px);
 }
 
-.shop-by-room img:hover, 
-.shop-by-style img:hover {
-  
-}
+.shop-by-room img:hover,
+.shop-by-style img:hover {}
 
 .appbanner {
   color: white;
@@ -464,7 +490,7 @@ h2 {
 }
 
 .phones img {
-  width: 550px; 
+  width: 550px;
   height: 100%;
   object-fit: contain;
   object-position: bottom;
