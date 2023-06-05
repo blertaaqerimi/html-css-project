@@ -40,7 +40,6 @@ li {
   ;
 }
 
-
 .announcement-bar a {
   text-decoration: none;
   color: white;
@@ -218,7 +217,8 @@ li {
   align-items: center;
   gap: 5px;
 }
-  .guide-btn > div > div > a {
+
+.guide-btn > div > div > a {
   width: 60px;
   height: 60px;
   border-radius: 50%;
@@ -231,6 +231,7 @@ li {
 #guidance-checkbox {
   display: none;
 }
+
 #guidance-checkbox:checked ~ div {
   display: flex;
   justify-content: space-between;
@@ -240,18 +241,30 @@ footer {
   display: flex;
   flex-direction: column;
   background-color: #f3f3f3;
+  padding-bottom: 26px;
 }
 
 .social-icons {
   display: flex;
   gap: 20px;
+}
 
+.contact {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: 40px 0 30px 0;
+}
+
+.contact i {
+  margin-right: 10px;
 }
 
 .footer-links {
   display: flex;
   justify-content: space-around;
   padding-top: 50px;
+  padding-bottom: 5rem;
 }
 
 .footer-links div img {
@@ -279,7 +292,8 @@ footer {
   font-size: 14.7px;
 }
 
-.links a:hover {
+.links a:hover,
+footer a:hover {
   cursor: pointer;
   border-bottom: 0.03rem solid black;
 }
@@ -289,4 +303,19 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
+  border-top: 0.1rem solid rgb(192, 185, 185);
+}
+
+.pay {
+  display: flex;
+  gap: 10px;
+  padding-top: 3rem;
+}
+
+.social-icons li a i:hover {
+  transform: scale(1.2);
+}
+
+.social-icons a:hover {
+  border: none;
 }
