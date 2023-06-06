@@ -176,18 +176,6 @@ li {
   gap: 20px;
 }
 
-@media screen and (max-width: 768px) {
-  .hero-section>div {
-    transform: translate(0, 30%);
-    max-width: 100%;
-    padding: 0 20px;
-  }
-
-  .guide-btn {
-    display: none;
-  }
-}
-
 .hero-section h1, .hero-section p {
   color: white;
   margin: 0;
@@ -256,6 +244,26 @@ li {
 #guidance-checkbox:checked~div {
   display: flex;
   justify-content: space-between;
+}
+
+@media screen and (max-width: 768px) {
+  .hero-section {
+    background: linear-gradient(90deg,rgba(0,0,0,.6) 0%,rgba(0,0,0,.24) 100%);
+  }
+
+  .hero-section h1 {
+    font-size: 44.6px;
+  }
+
+  .hero-section>div {
+    transform: translate(0, 30%);
+    max-width: 100%;
+    padding: 0 20px;
+  }
+
+  .guide-btn {
+    display: none;
+  }
 }
 
 footer {
@@ -392,6 +400,7 @@ footer a:hover {
 
 .gallery {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 10px;
   width: 100%;
@@ -401,6 +410,7 @@ footer a:hover {
   .gallery {
     overflow-x: auto;
     flex-wrap: nowrap;
+    justify-content: flex-start;
   }
 }
 
@@ -459,27 +469,33 @@ h2 {
   padding: 1.875rem 5rem;
 }
 
+.shop-by h2 {
+  padding: 23px;
+}
+
 .shop-by>div {
   display: flex;
   justify-content: space-around;
-  /* display: grid;
-  grid-template-columns: repeat(3, 1fr); */
   align-items: center;
   width: 100%;
-  /* margin-top: 30px; */
   overflow: auto;
+  font-size: 20px;
+  cursor: pointer;
 }
 
-.shop-by>div>a {
+.shop-by>div>div>a {
   display: inline-block;
   overflow: hidden;
   width: 400px;
   height: 500px;
   position: relative;
+  margin-bottom: 20px;
 }
 
-.shop-by>div>a:hover img {
+
+.shop-by>div>div>a:hover img {
   transform: scale(1.1);
+  /* height: 90%; */
 }
 
 .shop-by img {
@@ -492,6 +508,11 @@ h2 {
 @media screen and (max-width: 768px) {
   .shop-by {
     padding: 1.875rem;
+  }
+
+  .shop-by>div {
+    justify-content: flex-start;
+    font-size: 16px;
   }
 
   .shop-by>div>a {
@@ -514,7 +535,7 @@ h2 {
   background-image: url(./assets/app-banner-bg.webp);
   background-size: cover;
   background-position: center;
-  overflow: hidden;
+  margin-top: 3rem;
 }
 
 .mobileapps {
@@ -605,7 +626,8 @@ h2 {
     width: 100%;
     padding: 50px 30px 0;
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
+    box-sizing: border-box;
   }
 
   .phones a img {
@@ -617,12 +639,32 @@ h2 {
 }
 
 .newsletter {
+  width: 85%;
+  margin: 50px auto;
   text-align: center;
+  align-items: center;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-wrap: wrap;
-  background: #EBEBEB;
+  background-color: #EBEBEB;
   padding: 50px;
+}
+
+.newsletter h2 {
+  font-weight: 700;
+  font-size: 36px;
+  text-align: start;
+  letter-spacing: 0;
+  margin: 0 0 10.5px;
+  padding: 0;
+}
+
+.newsletter p {
+  font-size: 20px;
+  color: #000;
+  font-weight: 400;
+  margin: 0;
+  text-align: start;
 }
 
 .newsletter div {
@@ -637,37 +679,20 @@ h2 {
   align-items: center;
   width: 100%;
   position: relative;
+  height: fit-content;
 }
 
 .newsletter form input {
+  width: 70%;
   padding: 1rem 5rem 1rem 1rem;
   letter-spacing: 0;
   background-color: #fcfcfc;
-}
-
-.newsletter h2 {
-  font-weight: 700;
-  font-size: 36px;
-  text-align: start;
-  letter-spacing: 0;
-}
-
-.newsletter p {
-  font-size: 20px;
-  color: #000;
-  font-weight: 400;
-  margin: 0;
-  text-align: start;
-}
-
-.newsletter form {
-  position: relative;
-  height: fit-content;
+  border: none;
 }
 
 .newsletter form button {
   position: absolute;
-  right: 12px;
+  right: 5%;
   top: 0;
   width: 5rem;
   height: 80%;
@@ -688,6 +713,14 @@ h2 {
     align-items: center;
     gap: 20px;
     padding: 10px;
+  }
+
+  .newsletter h2 {
+    font-size: 24px;
+  }
+
+  .newsletter p {
+    font-size: 14px;
   }
 
   .newsletter div, .newsletter form {
